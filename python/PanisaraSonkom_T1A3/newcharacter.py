@@ -1,7 +1,7 @@
 
 
 char_questions = {
-    "Who said, 'When you play the game of thrones, you win or you die'?:": "B",
+    "Who said, 'When you play the game of thrones, you win or you die'?:": ["B","The villain from beginning to end. This character manipulates, betrays, and fight her way to the top."],
     "Who said, 'You'll be ruling over a graveyard if we don't defeat the Night King'?:": "A",
     "Who said, 'I will take back what is mine with fire and blood?':": "A",
     "Who said, 'Your words will disappear. Your house will disappear. Your name will disappear. All memory of you will disappear'?:": "D",

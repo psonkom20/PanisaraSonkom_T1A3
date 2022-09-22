@@ -45,7 +45,7 @@ def display_score(correct_guesses, user_guesses):
     cowsay.dragon("YOUR RESULTS")
     print("--------------------")
 
-    print("Answer key", end="")
+    print("Answer key: ", end="")
     for i in char_questions:
         print(char_questions.get(i), end = " ")
     print()
