@@ -2,6 +2,10 @@
 import random
 from finalcharacter import char_question
 from string import ascii_uppercase
+
+#Welcome page
+#cowsay.dragon
+
 #Main game structure and functionality
 NUMBER_QUESTION_PER_QUIZ = 15
 def new_game():
@@ -48,7 +52,20 @@ def get_char_answer(question, alternatives):
     while (ans_label := input("Enter your answer (A, B, C, or D): ")) not in labeled_choice:
         print(f"Not an option; Please choose between A, B, C, or D")
     return labeled_choice[ans_label]
+def play_again():
+    user_command = input("Do you want to try and fight for the Throne again? (yes or no): ")
+    user_command = user_command.upper()
+
+    if user_command == "YES":
+        return True
+    else:
+        return False
 
     
 if __name__ == "__main__":
     new_game()
+
+    while play_again():
+        new_game()
+    
+    print("Thanks for playing!!")
