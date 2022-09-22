@@ -15,7 +15,7 @@ char_question ={
         "Daenerys Targaryen",
         "Rhaegar Targaryen",
         "Rhaenyra Targaryen",
-        "Daemon Targaryen"
+        "Daemon Targaryen",
     ],
     "Who said, 'Your words will disappear. Your house will disappear. Your name will disappear. All memory of you will disappear'?:": [
         "Sansa Stark",
@@ -60,7 +60,7 @@ char_question ={
         "Brienne of Tarth",
     ],
     "Who said, 'By what right does the wolf judge the lion'?:": [
-        "Jaime Lannister"
+        "Jaime Lannister",
         "Cersei Lannister",
         "Tywin Lannister",
         "Tyrion Lannister",
@@ -84,7 +84,7 @@ char_question ={
         "Benjen Stark",
     ],
     "Who said, 'So many men, they risk so little. They spend their lives avoiding danger. And then they die. I'd risk everything to get what I want'?:": [
-        "Little Finger"
+        "Little Finger",
         "Tyrion Lannister",
         "Olenna Tyrell",
         "Cersei Lannister", 
