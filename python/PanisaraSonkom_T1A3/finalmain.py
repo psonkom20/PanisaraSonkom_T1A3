@@ -5,23 +5,24 @@ from finalcharacter import char_question
 from string import ascii_uppercase
 
 #Welcome page
-
+#Add instruction of game
+#Ask user how many question they want
 cowsay.dragon("Welcome! Are you ready to fight for the Throne?\n The game is simple. You'll be given a quote and\n ask which character said it. You have four\n character options but one chance to guess so\n answer carefully!! Goodluck!")
-user_number_q_per_game = int(input("How many questions would you like? There is a maximum of 15 question: "))
+def get_int():
+    return int(input("How many questions would you like? There is a maximum of 15 question: "))
 while True:     
     try:
-        user_number_q_per_game = int(input("Input cannot be 0 and MUST be between 1-15. Please enter how many questions you would again: "))
+        user_number_q_per_game = get_int()
+        print(f"This quiz will have {user_number_q_per_game} questions")
         break
-    except UnboundLocalError as error:
-       print('Input cannot be 0 and MUST be between 1-15')
-
+    except ZeroDivisionError:
+        print('Input cannot be 0 and MUST be between 1-15')
+        break
 print("------------------------------------------------------------------------------------------------------------------------")
-print(f"This quiz will have {user_number_q_per_game} questions")
-num_q_per_game = user_number_q_per_game
 #Main game structure and functionality
 def new_game():
     questions = prep_char_questions(
-        char_question, number_questions=num_q_per_game)
+        char_question, user_number_q_per_game)
     num_correct = 0
     for num, (question, alternatives) in enumerate(questions, start=1):
         print("------------------------------------------------------------------------------------------------------------------------")
@@ -79,6 +80,7 @@ if __name__ == "__main__":
     new_game()
 
     while play_again():
-        new_game()   
+        new_game()
+        
     
     cowsay.dragon("Thanks for playing!!")
