@@ -5,8 +5,9 @@ from finalcharacter import char_question
 from string import ascii_uppercase
 
 #Welcome page
-cowsay.dragon("Welcome! Are you ready to fight for the Throne? The game is simple. You'll be given a quote and ask which character said it. You have four character options but one chance to guess so answer carefully!! Goodluck!")
-user_number_q_per_game = int(input("How many questions would you like?: "))
+cowsay.dragon("Welcome! Are you ready to fight for the Throne?\n The game is simple. You'll be given a quote and\n ask which character said it. You have four\n character options but one chance to guess so\n answer carefully!! Goodluck!")
+user_number_q_per_game = int(input("How many questions would you like? (max: 15): "))
+
 #Main game structure and functionality
 num_q_per_game = user_number_q_per_game
 def new_game():
@@ -21,7 +22,7 @@ def new_game():
         num_correct += ask_char_questions(question, alternatives)
     total_score_perc = int((num_correct/num)*100)
     print("------------------------------------------------------------------------------------------------------------------------")
-    cowsay.dragon(f"You completed the quiz!! You got {num_correct} out of {num} questions correct. A " +str(total_score_perc) + " %!! You can only sit on the throne if you got all the question. So if you did, Congrats!!! The Throne is yours")
+    cowsay.dragon(f"You completed the quiz!! You got {num_correct} out of {num} questions correct. A " +str(total_score_perc) + " %!! You can only sit on the\n throne if you got all the question. So if you\n did, Congrats!!! The Throne is yours!!!")
     print("------------------------------------------------------------------------------------------------------------------------")
 
 #Randomise questions order to add difficulty for player who is playing multiple time
@@ -50,7 +51,8 @@ def ask_char_questions(question, alternatives):
 #Label alternative choice
 #if user enter choice that is not available allow them to answer again
 def get_char_answer(question, alternatives):
-    cowsay.dragon(f"{question}")
+    print(f"{question}")
+    print("------------------------------------------------------------------------------------------------------------------------")
     labeled_choice = dict(zip(ascii_uppercase, alternatives))
     for label, alternative in labeled_choice.items():
         print(f" {label}. {alternative}")
