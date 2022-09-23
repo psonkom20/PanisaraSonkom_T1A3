@@ -13,12 +13,19 @@ def get_int():
 while True:     
     try:
         user_number_q_per_game = get_int()
-        print(f"This quiz will have {user_number_q_per_game} questions")
-        break
-    except ZeroDivisionError:
-        print('Input cannot be 0 and MUST be between 1-15')
-        break
-print("------------------------------------------------------------------------------------------------------------------------")
+        if user_number_q_per_game <= 15:
+            print("------------------------------------------------------------------------------------------------------------------------")
+            print(f"This quiz will have {user_number_q_per_game} questions")
+            break
+        if user_number_q_per_game < 1:
+            print("input cannot be 0")
+        else:
+            print("There is a maximum of 15 questions")
+        #print("------------------------------------------------------------------------------------------------------------------------")
+        #print(f"This quiz will have {user_number_q_per_game} questions")
+    except (ValueError,ZeroDivisionError,UnboundLocalError) as error:
+        print('Provide an integer value')
+
 #Main game structure and functionality
 def new_game():
     questions = prep_char_questions(
