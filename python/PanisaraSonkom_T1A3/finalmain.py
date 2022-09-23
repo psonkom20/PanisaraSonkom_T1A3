@@ -5,14 +5,13 @@ from finalcharacter import char_question
 from string import ascii_uppercase
 
 #Welcome page
-cowsay.dragon("Welcome! Are you ready to fight for the Throne?")
-USER_NUMBER_QUESTION_PER_QUIZ = int(input("How many questions would you like?: "))
-
+cowsay.dragon("Welcome! Are you ready to fight for the Throne? The game is simple. You'll be given a quote and ask which character said it. You have four character options but one chance to guess so answer carefully!! Goodluck!")
+user_number_q_per_game = int(input("How many questions would you like?: "))
 #Main game structure and functionality
-NUMBER_QUESTION_PER_QUIZ = USER_NUMBER_QUESTION_PER_QUIZ
+num_q_per_game = user_number_q_per_game
 def new_game():
     questions = prep_char_questions(
-        char_question, number_questions = NUMBER_QUESTION_PER_QUIZ
+        char_question, number_questions = num_q_per_game
     )
 
     num_correct = 0
@@ -20,8 +19,9 @@ def new_game():
         print("------------------------------------------------------------------------------------------------------------------------")
         print(f"Question {num}:")
         num_correct += ask_char_questions(question, alternatives)
+    total_score_perc = int((num_correct/num)*100)
     print("------------------------------------------------------------------------------------------------------------------------")
-    cowsay.dragon(f"You completed the quiz!! You got {num_correct} out of {num} questions correct. You can only sit on the throne if you got all the question. So if you did, Congrats!!! The Throne is yours")
+    cowsay.dragon(f"You completed the quiz!! You got {num_correct} out of {num} questions correct. A " +str(total_score_perc) + " %!! You can only sit on the throne if you got all the question. So if you did, Congrats!!! The Throne is yours")
     print("------------------------------------------------------------------------------------------------------------------------")
 
 #Randomise questions order to add difficulty for player who is playing multiple time
@@ -54,9 +54,10 @@ def get_char_answer(question, alternatives):
     labeled_choice = dict(zip(ascii_uppercase, alternatives))
     for label, alternative in labeled_choice.items():
         print(f" {label}. {alternative}")
+ 
     while (ans_label := input("Enter your answer (A, B, C, or D): ")) not in labeled_choice:
-        print(f"Not an option. Please choose between A, B, C, or D")
-    return labeled_choice[ans_label]
+        print(f"Not an option. Be sure to capitalise your answer. Please choose between A, B, C, or D")
+    return labeled_choice[ans_label]  
 def play_again():
     user_command = input("Do you want to try and fight for the Throne again? (yes or no): ")
     user_command = user_command.upper()
@@ -65,12 +66,10 @@ def play_again():
         return True
     else:
         return False
-
-    
 if __name__ == "__main__":
     new_game()
 
     while play_again():
-        new_game()
+        new_game()   
     
     cowsay.dragon("Thanks for playing!!")
