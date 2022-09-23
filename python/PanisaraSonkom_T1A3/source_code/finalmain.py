@@ -2,10 +2,6 @@ import random
 from string import ascii_uppercase
 import cowsay
 from finalcharacter import char_question
-
-
-
-
 #Welcome page
 #Add instruction of game
 #Ask user how many question they want
@@ -27,7 +23,7 @@ while True:
             print("input cannot be 0")
         else:
             print("There is a maximum of 15 questions")
-    except (ValueError,ZeroDivisionError,UnboundLocalError) as error:
+    except (ValueError,ZeroDivisionError,UnboundLocalError,TypeError) as error:
         print('Provide an integer value')
 
 #Main game structure and functionality
@@ -36,6 +32,7 @@ def new_game():
     questions = prep_char_questions(
         char_question, user_number_q_per_game)
     num_correct = 0
+
     for num, (question, alternatives) in enumerate(questions, start=1):
         print("------------------------------------------------"\
             "------------------------------------------------------------------------")
@@ -44,8 +41,8 @@ def new_game():
     total_score_perc = int((num_correct/num)*100)
     print("------------------------------------------------"\
             "------------------------------------------------------------------------")
-    cowsay.dragon(f"You completed the quiz!! You got {num_correct} out" \
-         "of {num}\n questions. A " +str(total_score_perc) + " %!!"\
+    cowsay.dragon(f"You completed the quiz!! You got {num_correct} out " \
+         f"of {num}\n questions. A " +str(total_score_perc) + " %!!"\
          "You can only sit on the\n throne if you got all the question."\
          "So if\n you did, Congrats!!! The Throne is yours!!!\n If not try againg!!")
     print("------------------------------------------------"\
