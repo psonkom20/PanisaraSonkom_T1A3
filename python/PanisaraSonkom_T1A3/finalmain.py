@@ -7,6 +7,8 @@ from string import ascii_uppercase
 #Welcome page
 cowsay.dragon("Welcome! Are you ready to fight for the Throne?\n The game is simple. You'll be given a quote and\n ask which character said it. You have four\n character options but one chance to guess so\n answer carefully!! Goodluck!")
 user_number_q_per_game = int(input("How many questions would you like? (max: 15): "))
+print("------------------------------------------------------------------------------------------------------------------------")
+print(f"This quiz will have {user_number_q_per_game} questions")
 
 #Main game structure and functionality
 num_q_per_game = user_number_q_per_game
@@ -22,7 +24,7 @@ def new_game():
         num_correct += ask_char_questions(question, alternatives)
     total_score_perc = int((num_correct/num)*100)
     print("------------------------------------------------------------------------------------------------------------------------")
-    cowsay.dragon(f"You completed the quiz!! You got {num_correct} out of {num} questions correct. A " +str(total_score_perc) + " %!! You can only sit on the\n throne if you got all the question. So if you\n did, Congrats!!! The Throne is yours!!!")
+    cowsay.dragon(f"You completed the quiz!! You got {num_correct} out of {num}\n questions. A " +str(total_score_perc) + " %!! You can only sit on the\n throne if you got all the question. So if\n you did, Congrats!!! The Throne is yours!!!\n If not try againg!!")
     print("------------------------------------------------------------------------------------------------------------------------")
 
 #Randomise questions order to add difficulty for player who is playing multiple time
