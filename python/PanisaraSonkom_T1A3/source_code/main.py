@@ -24,8 +24,8 @@ if __name__ == '__main__':
                 print("input cannot be 0")
             else:
                 print("There is a maximum of 15 questions")
-        except (ValueError,ZeroDivisionError,UnboundLocalError,TypeError) as error:
-            print('Provide an integer value')
+        except (ValueError,ZeroDivisionError,UnboundLocalError,TypeError) as err:
+            print("Provide a positive integer value")
 
 #Main game structure and functionality
 def new_game():
