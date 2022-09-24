@@ -68,7 +68,7 @@ def ask_char_questions(question, alternatives):
         return 0
 
 def get_char_answer(question, alternatives):
-    '''retrieve answer and randomise choice order'''
+    '''retrieve answer and label available choices'''
     print(f"{question}")
     print("------------------------------------------------"\
             "------------------------------------------------------------------------")

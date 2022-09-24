@@ -26,7 +26,7 @@ char_question ={
     "Who said, 'When people ask you what happened here, tell them the North remembers. Tell them winter came for House Frey'?:": [
         "Arya Stark",
         "Rob Stark",
-        "Lyanna Mormont", 
+        "Lyanna Mormont",
          "Sansa Stark",
     ],
     "Who said, 'An endless night. He wants to erase this world, and I am its memory'?:": [
@@ -87,6 +87,6 @@ char_question ={
         "Little Finger",
         "Tyrion Lannister",
         "Olenna Tyrell",
-        "Cersei Lannister", 
+        "Cersei Lannister",
     ],
 }
