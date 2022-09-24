@@ -2,13 +2,12 @@ import random
 from string import ascii_uppercase
 import cowsay
 from finalcharacter import char_question
-from sys import argv
-#Welcome page
-#Add instruction of game
-#Ask user how many question they want
+
+#Welcome page/game instruction
 cowsay.dragon("Welcome! Are you ready to fight for the Throne?\n The game is simple." \
   "You'll be given a quote and\n ask which character said it. You have four\n character"\
   "options but one chance to guess so\n answer carefully!! Goodluck!")
+#User input number of questions they want
 def get_int():
     '''let user input how many question they want'''
     return int(input("How many questions would you like? There is a maximum of 15 question: "))
@@ -49,18 +48,12 @@ def new_game():
          "So if\n you did, Congrats!!! The Throne is yours!!!\n If not try againg!!")
     print("------------------------------------------------"\
             "------------------------------------------------------------------------")
-#Randomise questions order to add difficulty for player who is playing multiple time
-#Allow user to select however many questions they want; IMPORTANT: max 15 questions
+
 def prep_char_questions(questions, number_questions):
     '''randomize question order and retrieve number of question input bt user'''
     number_questions = min(number_questions, len(questions))
     return random.sample(list(questions.items()), k=number_questions)
 
-#Ensure that the specific answer of the randomise question list is selected
-#Display all choices of the questions
-# check user's answer
-#add num_correct count
-#seperate into two functions for readability
 def ask_char_questions(question, alternatives):
     '''randomize choice order and check answer'''
     correct_ans = alternatives[0]
@@ -73,11 +66,9 @@ def ask_char_questions(question, alternatives):
     else:
         cowsay.dragon(f"Tough luck! The answer was {correct_ans!r}")
         return 0
-#Allow user to input their answer
-#Label alternative choice
-#if user enter choice that is not available allow them to answer again
+
 def get_char_answer(question, alternatives):
-    '''retrieve answer and choices'''
+    '''retrieve answer and randomise choice order'''
     print(f"{question}")
     print("------------------------------------------------"\
             "------------------------------------------------------------------------")
@@ -88,6 +79,7 @@ def get_char_answer(question, alternatives):
         print("Not an option. Be sure to capitalise your answer."\
              "Please choose between A, B, C, or D")
     return labeled_choice[ans_label]
+
 def play_again():
     '''let user play again'''
     user_command = input("Do you want to try and fight for the Throne again? (yes or no): ")
