@@ -50,7 +50,7 @@ def new_game():
             "------------------------------------------------------------------------")
 
 def prep_char_questions(questions, number_questions):
-    '''randomize question order and retrieve number of question input by user'''
+    '''randomize question order and retrieve number of question input by` user'''
     number_questions = min(number_questions, len(questions))
     return random.sample(list(questions.items()), k=number_questions)
 
