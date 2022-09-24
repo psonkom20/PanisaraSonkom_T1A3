@@ -6,8 +6,8 @@ from finalcharacter import char_question
 #Add instruction of game
 #Ask user how many question they want
 cowsay.dragon("Welcome! Are you ready to fight for the Throne?\n The game is simple." \
-"You'll be given a quote and\n ask which character said it. You have four\n character"\
-"options but one chance to guess so\n answer carefully!! Goodluck!")
+  "You'll be given a quote and\n ask which character said it. You have four\n character"\
+  "options but one chance to guess so\n answer carefully!! Goodluck!")
 def get_int():
     '''let user input how many question they want'''
     return int(input("How many questions would you like? There is a maximum of 15 question: "))
@@ -21,11 +21,11 @@ if __name__ == '__main__':
                 print(f"This quiz will have {user_number_q_per_game} questions")
                 break
             if user_number_q_per_game < 0:
-                print("input cannot be 0")
+                print("Out of range. Please select between 1-15")
             else:
                 print("There is a maximum of 15 questions")
         except (ValueError,ZeroDivisionError,UnboundLocalError,TypeError) as err:
-            print("Provide a positive integer value")
+            print("Please provide a positive integer value")
 
 #Main game structure and functionality
 def new_game():

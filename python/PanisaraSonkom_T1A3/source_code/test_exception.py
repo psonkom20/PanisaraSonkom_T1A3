@@ -1,6 +1,8 @@
+import pytest
 from main import get_int
 
 inputs = iter([8, 10])
+strinput = iter('sdfdf')
 
 def fake_input(prompt):
     '''input for testing'''
@@ -13,3 +15,8 @@ class TestGetInt:
         monkeypatch.setattr('builtins.input', fake_input)
         assert get_int() == 8
         assert get_int() == 10
+
+
+
+
+
