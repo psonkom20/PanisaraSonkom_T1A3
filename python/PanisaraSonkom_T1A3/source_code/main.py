@@ -2,6 +2,7 @@ import random
 from string import ascii_uppercase
 import cowsay
 from finalcharacter import char_question
+from sys import argv
 #Welcome page
 #Add instruction of game
 #Ask user how many question they want
