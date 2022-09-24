@@ -1,4 +1,5 @@
-## Attribution to referenced sources
+## Game of Throne quiz game
+Welcome to the Game of Throne quiz game. In this game you will be challenge to match Game of Throne's quotes with the character that said it. There are 15 questions available but you can choose to answer less if you want. And don't worry, you can play as many times as you want. Ready?! Join the fight for the Throne!!!
 
 ## Link to source control repository
 https://github.com/psonkom20/PanisaraSonkom_T1A3/tree/main/python/PanisaraSonkom_T1A3
@@ -24,5 +25,19 @@ This feature allows user to play again or quit. To do this I loop the game back 
 ![Figure3-2](./Resources/fig3-2.png)
 
 ## Implementation plan
-This project use Trelloboard to manage implementation plan. Link:
+This project use Trelloboard to manage implementation plan.
+![Figure4](./Resources/fig4.png)
+
+## Installation instruction
+1. Ensure that python3 is installed. If not please download it here: https://www.python.org/downloads/
+2. Download the respoitory zip file onto your computer
+3. Once downloaded, click on the zip file to access the folder
+4. Launch the terminal application on your laptop
+5. Ensure that you are move into the source_code folder
+7. User can do this by using 'cd' command follow by the path to the folder location
+8. Using the pwd command, user can check whether they are move into the source_code folder or not. If you are, the command line should end with 'source_code' like this:
+![Figure5](./Resources/fig5.png)
+7. Next, input './run_script' to your command line and press enter.
+8. Game will launch and user can start playing
+
 
