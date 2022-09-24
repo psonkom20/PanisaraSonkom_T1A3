@@ -1,3 +1,6 @@
 import random
+import main
+import finalcharacter
 
-def test_random():
+class TestDict:
+    def test_dict(self):

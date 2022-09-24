@@ -11,20 +11,21 @@ cowsay.dragon("Welcome! Are you ready to fight for the Throne?\n The game is sim
 def get_int():
     '''let user input how many question they want'''
     return int(input("How many questions would you like? There is a maximum of 15 question: "))
-while True:
-    try:
-        user_number_q_per_game = get_int()
-        if user_number_q_per_game <= 15:
-            print("------------------------------------------------"\
-            "------------------------------------------------------------------------")
-            print(f"This quiz will have {user_number_q_per_game} questions")
-            break
-        if user_number_q_per_game < 1:
-            print("input cannot be 0")
-        else:
-            print("There is a maximum of 15 questions")
-    except (ValueError,ZeroDivisionError,UnboundLocalError,TypeError) as error:
-        print('Provide an integer value')
+if __name__ == '__main__':
+    while True:
+        try:
+            user_number_q_per_game = get_int()
+            if user_number_q_per_game <= 15:
+                print("------------------------------------------------"\
+                "------------------------------------------------------------------------")
+                print(f"This quiz will have {user_number_q_per_game} questions")
+                break
+            if user_number_q_per_game < 0:
+                print("input cannot be 0")
+            else:
+                print("There is a maximum of 15 questions")
+        except (ValueError,ZeroDivisionError,UnboundLocalError,TypeError) as error:
+            print('Provide an integer value')
 
 #Main game structure and functionality
 def new_game():
