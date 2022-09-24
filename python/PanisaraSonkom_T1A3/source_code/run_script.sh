@@ -1,7 +1,7 @@
 #!/bin/bash
 python3 main.py $1
 
-
+source .venv/bin/activate
 python3 -m pip install cowsay
 
 if ! [[ -x "$ (command -v python)"]]
