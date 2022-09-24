@@ -38,7 +38,7 @@ def new_game():
         print("------------------------------------------------"\
             "------------------------------------------------------------------------")
         print(f"Question {num}:")
-        num_correct += ask_char_questions(question, alternatives)
+        num_correct += check_char_answer(question, alternatives)
     total_score_perc = int((num_correct/num)*100)
     print("------------------------------------------------"\
             "------------------------------------------------------------------------")
@@ -54,7 +54,7 @@ def prep_char_questions(questions, number_questions):
     number_questions = min(number_questions, len(questions))
     return random.sample(list(questions.items()), k=number_questions)
 
-def ask_char_questions(question, alternatives):
+def check_char_answer(question, alternatives):
     '''randomize choice order and check answer'''
     correct_ans = alternatives[0]
     ordered_alternatives = random.sample(alternatives, k=len(alternatives))
