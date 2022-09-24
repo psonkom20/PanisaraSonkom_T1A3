@@ -37,7 +37,7 @@ This project use Trelloboard to manage implementation plan.
 7. User can do this by using 'cd' command follow by the path to the folder location
 8. Using the pwd command, user can check whether they are move into the source_code folder or not. If you are, the command line should end with 'source_code' like this:
 ![Figure5](./Resources/fig5.png)
-7. Next, input './run_script' to your command line and press enter.
+7. Next, input './run_script.sh' to your command line and press enter.
 8. Game will launch and user can start playing
 
 
