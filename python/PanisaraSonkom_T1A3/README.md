@@ -1,6 +1,9 @@
 ## Game of Throne quiz game
 Welcome to the Game of Throne quiz game. In this game you will be challenge to match Game of Throne's quotes with the character that said it. There are 15 questions available but you can choose to answer less if you want. And don't worry, you can play as many times as you want. Ready?! Join the fight for the Throne!!!
 
+### Link to presentation
+https://youtu.be/Su2mWGfRhM0
+
 ## Link to source control repository
 https://github.com/psonkom20/PanisaraSonkom_T1A3/tree/main/python/PanisaraSonkom_T1A3
 ## Code Styling convention
